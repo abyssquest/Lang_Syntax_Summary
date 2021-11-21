@@ -1,9 +1,5 @@
-## Abyss_Custom ##
-Servers/
-target/
-
 ### #### ###
-### JAVA ###
+### Java ###
 
 # Compiled class file
 *.class
