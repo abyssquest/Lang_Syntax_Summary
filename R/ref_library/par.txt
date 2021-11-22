@@ -1,0 +1,50 @@
+par() : 그래프의 모양을 다양하게 조절할 수 있는 그래픽 인수들을 설정하고 조회하는 함수.
+
+mfrow / mfcol : 한 화면에 여러 그래프를 비교해볼 때 사용. figure region을 나누어 plot region을 만들고 배치 순서를 정하는 인수.
+	mfrow : 그래프를 행 우선 배치. default =c(1,1)
+	mfcol : 그래플르 열 우선 배치. default=c(1,1)
+
+fig : 분할된 영역의 크기 및 위치 지정. default=c(0,1,0,1)
+	복잡하게 분할할 경우 네 개의 인수를 일일이 계산해야 하므로 layout() 등 타 함수를 쓰는 게..
+
+new : 새로운 그래픽 함수 호출 시, figure region을 초기화할 것인가?
+	두 개 이상의 그래픽 함수를 한 figure region에 나타낼 때 주로 사용.
+	default=FALSE → 현재 figure region은 초기화시키고 새로운 그래프를 그림.
+	default=TRUE → 화면 분할 없이 그래프 하나만 쓸 때, 이전 결과에 겹쳐서 새 결과를 출력함.
+
+type : 좌표 영역에 데이터를 출력하는 형태.
+	"p" - points. 점 / "l" - line. 선 / "b" - both points and lines. 점과 선 /
+	"c" - empty points joind by lines. 점이 빠진 선 / "o" - overplotted p. and l. 겹친 점과 선 /
+	"s"나"S" - stair steps. 계단 모양 / "h" - histogram-like vertical lines. 수직선
+
+mar : margin. 여백 지정.(plot margin) default=c(5,4,4,2)+0.1
+oma : outer margin. 여백 지정.(outer margin)
+
+pty : plot type. plot region의 모양을 지정.
+	"s"(square, x축과 y축 스케일(비율)이 동일하게),"m"(maximal, 최대 크기로)
+
+bty : box type. plot region 둘레의 상자 모양을 지정.
+	"o","l","7","c","u","]" 글자와 닮은 형태.. default="o"
+
+pch : point character. 점의 모양. default=1
+
+cex : character expansion. 문자나 점의 크기. default=1
+
+lty : line type. 선의 모양. default="solid"(1)
+
+col : color. 색상 지정.
+	1~8까지 정해진 색깔이 있음.
+	"#RRGGBB" 형식으로 색상 지정 가능.
+	"beige","aquamarine" 등 이름으로 색상 지정 가능.
+
+str : string rotation. 문자열 회전. default=0. (단위 degree, 음수도 사용 가능.) text() 함수에서 사용.
+
+family : "sans","serif","mono" 등 문자의 폰트 종류 지정.
+
+font : 폰트 체 지정. "plain"=1, "bold"=2,"italic"=3,"bold italic"=4,"symbol"=5
+
+fg : 전경색. default="black"
+bg : 배경색. default="transparent"
+
+tck : tick marks. 좌표 눈금선의 길이 지정. plot region의 크기를 기준으로 값이 계산됨.
+tcl : tick length. 좌표 눈금선의 길이 지정. cex=1일 때 문자의 길이를 tcl=1로 하여 값이 계산됨.

@@ -1,6 +1,6 @@
-package control_stmt;
+package act_control;
 
-public class Ctrl_while {
+public class While {
 	public static void main(String[] args) {
 		
 	}
